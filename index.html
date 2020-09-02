@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="apiViewer" >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project1</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="js/MainController.js"></script>
+
+  </head>
+<body ng-controller="MainController">
+   <section id="team" class="pb-5">
+   <div class="container">
+  		 <h5 class="section-title h1">{{message}}</h5>
+  		 <div class="row">
+  				 <!-- Team member -->
+  				 <div ng-repeat="emp in employees" class="col-xs-12 col-sm-6 col-md-4">
+  						 <div class="image-flip" >
+  								 <div class="mainflip flip-0">
+  										 <div class="frontside">
+  												 <div class="card">
+  														 <div class="card-body text-center">
+  																 <p><img class="img-fluid" ng-src="{{emp.avatar}}" alt="card image"></p>
+  																 <h4 class="card-title">{{emp.first_name}} {{emp.last_name}}</h4>
+  																 <p class="card-text">Email: {{emp.email}}.</p>
+  																 <a href="{{url}}" class="btn btn-primary btn-sm">Follow <i class="fa fa-plus"></i></a>
+  														 </div>
+  												 </div>
+  										 </div>
+  								 </div>
+  						 </div>
+  				 </div>
+  				 <!-- ./Team member -->
+           <h5 class="text-center" >{{text}}</h5>
+  		 </div>
+   </div>
+  </section>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/jquery.twbsPagination.js"></script>
+
+</body>
+</html>
